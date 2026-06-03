@@ -1,0 +1,13 @@
+Nexla React SDK — Examples
+Copyright 2026 Nexla, Inc.
+
+This repository contains example applications for the @nexla/react-sdk package.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+these files except in compliance with the License. A copy of the License is in
+the LICENSE file and at http://www.apache.org/licenses/LICENSE-2.0
+
+"Nexla" and the Nexla logo are trademarks of Nexla, Inc. Per Section 6 of the
+License, this grant conveys no rights to use Nexla's names, logos, or trademarks.
+Forks and derivative works must not use the Nexla name or brand in any way that
+suggests endorsement by, or affiliation with, Nexla, Inc.

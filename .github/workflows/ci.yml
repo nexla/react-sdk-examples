@@ -1,0 +1,44 @@
+# CI — typecheck + build every example against the published @nexla/react-sdk.
+#
+# Each example is a standalone app installing the package from public npm, so a green
+# run proves the published SDK still type-checks and builds in a real consumer. No
+# secrets and no publishing — `.env.local` is only needed to *run* an example, not build it.
+
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        example: [styled, headless, playground]
+    defaults:
+      run:
+        working-directory: examples/${{ matrix.example }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: examples/${{ matrix.example }}/package-lock.json
+
+      - name: Install (from public npm, exact lockfile)
+        run: npm ci
+
+      - name: Typecheck + build
+        run: npm run build
