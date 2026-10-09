@@ -1,6 +1,6 @@
 # Headless example
 
-**Full control over every pixel — no SDK components, no Radix UI.** `useConnectorForm` loads the
+**Full control over every pixel — your own UI, not SDK-rendered controls.** `useConnectorForm` loads the
 fields, applies conditional visibility/defaults, validates, runs OAuth, and submits; you render
 every element yourself. Same look and feel as the playground — just this one pattern.
 
@@ -18,7 +18,7 @@ npm run dev                    # http://localhost:3000
 
 - **SDK USAGE** — what you'd copy: `useConnectorForm(connectorKey)` driving a fully custom form.
   `RawField` renders each input with plain HTML, OAuth connectors show an authorize step, and
-  `submit()` saves the credential. No SDK components, so **no Radix UI dependency**.
+  `submit()` saves the credential. The form uses application-owned HTML controls.
 - **Demo scaffolding** — theme + page chrome (header, dark-mode toggle, footer). Identical across
   all the examples and the playground; safe to ignore.
 

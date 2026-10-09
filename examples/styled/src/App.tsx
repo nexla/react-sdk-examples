@@ -268,7 +268,7 @@ function StickyHeader({
             color: theme.textPrimary,
             fontFamily: 'system-ui, -apple-system, sans-serif'
           }}>
-          Nexla Connect SDK
+          Nexla React SDK
         </span>
       </div>
 
@@ -453,7 +453,7 @@ function Footer({ theme }: { theme: Theme }) {
             fontFamily: 'system-ui, -apple-system, sans-serif',
             letterSpacing: '0.01em'
           }}>
-          Nexla Connect SDK
+          Nexla React SDK
         </span>
         <span
           style={{

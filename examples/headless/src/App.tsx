@@ -1,9 +1,9 @@
 /**
- * Headless example — bring your own UI (full control, no SDK components, no Radix UI).
+ * Headless example — bring your own UI (no SDK-rendered controls).
  *
  * WHY LOOK AT THIS: you want to render the credential form yourself. useConnectorForm loads the
  * fields, applies conditional visibility/defaults, validates, runs OAuth, and submits — you own
- * every element. Nothing styled ships from the SDK here, so there's no Radix UI dependency.
+ * every element. This example renders the form with plain HTML controls.
  *
  * Two parts below:
  *   1) SDK USAGE        — what you'd copy into your app (useConnectorForm + your own inputs).
@@ -694,7 +694,7 @@ function StickyHeader({
             color: theme.textPrimary,
             fontFamily: 'system-ui, -apple-system, sans-serif'
           }}>
-          Nexla Connect SDK
+          Nexla React SDK
         </span>
       </div>
 
@@ -839,7 +839,7 @@ function Footer({ theme }: { theme: Theme }) {
             fontFamily: 'system-ui, -apple-system, sans-serif',
             letterSpacing: '0.01em'
           }}>
-          Nexla Connect SDK
+          Nexla React SDK
         </span>
         <span
           style={{

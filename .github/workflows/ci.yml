@@ -24,7 +24,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        example: [styled, headless, playground]
+        example: [styled, headless, playground, embed-form]
     defaults:
       run:
         working-directory: examples/${{ matrix.example }}
